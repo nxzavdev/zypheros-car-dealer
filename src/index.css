@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+body {
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: 300;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  transition: all 1s ease-in-out;
+}
+
+.blurred {
+  backdrop-filter: blur(4px);
+  background-color: #0009;
+  animation: appear 1s forwards;
+}
+
+.hiddenx {
+  animation: disappear 1s forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  } 50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
